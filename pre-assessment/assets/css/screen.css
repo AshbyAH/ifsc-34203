@@ -99,17 +99,18 @@ body {
     float: right;
     border: 2px solid #FFFFFF;
     border-radius: 4px;
-    margin: 60px 275px 0 5px;
+    margin: 60px 15px 30px 5px;
 }
 #footer {
 	background-color: #000;
 	color: #FFF;
 	height: 25px;
+    clear:right;
 }
 #footer h6 {
 	font-size: 12px;
 	line-height: 25px;
-	margin-right: 20px;
+	margin-right: 25px;
 	margin-left: 20px;
 }
 #footer h6 a {
