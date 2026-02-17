@@ -1,0 +1,44 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Fix Clearing Bugs */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main {
+  background: rgba(51, 51, 51, 0.4);
+  width:80vw;
+  margin: 20px auto;
+  border: 1px solid #000;
+}
+
+header.primary {
+  width: 95%;
+  background: rgba(240, 5, 5, 0.4);
+  margin: 2.4%;
+  padding:15px;
+  float: left;
+}
+
+article.assignment {
+  width: 37.5%;
+  min-height: 15vw;
+  background: rgba(240, 60, 5, 0.4);
+  margin: 6.251%;
+  padding: 15px;
+  float: left;
+}
