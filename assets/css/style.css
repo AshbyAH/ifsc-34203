@@ -20,10 +20,24 @@ html {
 }
 
 main {
-  background: rgba(51, 51, 51, 0.4);
+  background-image: url("/assets/img/subtle-prism.svg");
   width:80vw;
   margin: 20px auto;
   border: 1px solid #000;
+}
+
+h1,h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+
+h3,h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
 }
 
 header.primary {
