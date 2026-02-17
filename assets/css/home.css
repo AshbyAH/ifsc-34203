@@ -31,11 +31,27 @@ h1,h2 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 2em; /* 16px*2=32px */
+}
+
+h2 {
+  font-size: 1.5em; /* 16px*1.5=24px */
+}
+
 h3,h4 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  font-size: 1.25em; /* 18px*1.055=18.99 */
 }
+
+h3 {
+  font-size: 1.25em; /* 16px*1.25=20px */
+}
+
+h4 {
+  font-size: 1em;
+}
+
 p {
   font-family: "Nunito", sans-serif;
   font-weight: 500;
