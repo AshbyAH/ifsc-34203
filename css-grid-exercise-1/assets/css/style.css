@@ -1,0 +1,54 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Fix Clearing Bugs */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main {
+background-image: url("/flexible-grid/assets/img/grid.png"); /* 1220px width, 8 col */
+width:80vw;
+margin: 20px auto;
+border: 1px solid #000;  
+}
+
+header.primary, footer.primary{
+/* width:1180px; */
+ width:96.7213%; /* 1180px / 1220px = 0.967213 */
+ background: rgba(4, 95, 117, 0.4);
+ margin: 1.6393%;
+ padding: 20px;
+ float: left; 
+}
+
+#blog{
+/* width:730px; */
+  width: 59.836%; /* 730px / 1220px = 0.598360 */
+  margin-left: 1.6393%;
+  background: rgba(2, 25, 77, 0.6);
+  padding: 20px;
+  float: left;
+}
+
+aside {
+  /* width: 430px; */
+  background: rgba(4, 35, 173, 0.3);
+  width: 35.2459%; /* 430px / 1220px = 0.352459 */
+  margin-left: 1.6393%;
+  padding: 20px;
+  float: left;
+}
