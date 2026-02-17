@@ -49,8 +49,8 @@ header.primary {
 }
 
 article.assignment {
-  width: 37.5%;
-  min-height: 15vw;
+  width: 36.5%;
+  min-height: fit-content;
   background: rgba(240, 60, 5, 0.4);
   margin: 6.251%;
   padding: 15px;
