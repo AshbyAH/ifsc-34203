@@ -1,0 +1,60 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Fix Clearing Bugs */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main {
+  background-image: url("/assets/img/subtle-prism.svg");
+  width:80vw;
+  margin: 20px auto;
+  border: 1px solid #000;
+}
+
+h1,h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+
+h3,h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.25em; /* 18px*1.055=18.99 */
+}
+p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.125em; /* 16px*1.125=18px */
+}
+
+header.primary {
+  width: 95%;
+  background: rgba(240, 5, 5, 0.4);
+  margin: 2.4%;
+  padding:15px;
+  float: left;
+}
+
+article.assignment {
+  width: 36.5%;
+  min-height: fit-content;
+  background: rgba(240, 60, 5, 0.4);
+  margin: 6.251%;
+  padding: 15px;
+  float: left;
+}
