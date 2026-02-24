@@ -27,12 +27,49 @@
       padding: 20px;
     }
 
+    header.primary {
+        grid-area: header;
+        background-color: #444;
+        color: #fff
+    }
+
+    footer.primary {
+        grid-area: footer;
+        background-color: #444;
+        color: #fff
+    }
+
+    aside {
+        grid-area: sidebar;
+        background-color: #626262;
+        color: #fff;
+    }
+
+    #content{
+        grid-area: content;
+        background-color: #626262;
+        color: #fff;
+    }
+
+    #blog{
+        grid-area: blog;
+        background-color: #626262;
+        color: #fff;
+    }
+
     main {
       display: grid;
       gap: 20px;
-      max-width: 80vw;
+      grid-template-columns: 15vw 15vw 15vw 15vw;
+      grid-template-areas:
+      "header header header header"
+      "content content blog blog"
+      "sidebar sidebar sidebar sidebar"
+      "footer footer footer footer";
+      max-width: 60vw;
       margin: 20px auto;
     }
+
   </style>
 
 </head>
