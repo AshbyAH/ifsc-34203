@@ -20,7 +20,7 @@ html {
 }
 
 main {
-  background-image: "../img/subtle-prism.svg";
+  background-image: url(../img/subtle-prism.svg);
   width:80vw;
   margin: 20px auto;
   border: 1px solid #000;
