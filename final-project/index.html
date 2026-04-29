@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/home.css">
   <meta name="description" content="We are going to refine this document down to a good starting point for all html5 projects moving forward." />
   <meta name="author" content="Ashby Harmon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +27,20 @@
         <span></span>
       </label>
 
+
       <nav class="nav-menu">
         <ul class="menu">
           <li class="nav-item"><a class="nav-link" href="#">Catalog</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Popular</a></li>
           <li class="nav-item"><a class="nav-link" href="#">New</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Simulcasts</a></li>
+          <li class="nav-item"><a class="nav-link" id="genre-nav" href="#">Genres</a></li>
           <div class="dropdown">
-            <li class="nav-item"><a class="nav-link" href="#">Genres</a></li>
+            <input type="checkbox" id="drop-toggle" class="drop-toggle">
+            <li class="nav-item">
+              <label for="drop-toggle" class="genres">
+              <span>Genres</span>
+            </label></li>
             <div class="dropdown-menu">
               <ul class="drop-list">
                 <li class="dropdown-item"><a class="item-link" href="#">Action</a></li>
@@ -55,9 +62,6 @@
               </svg>
             </button>
           </form>
-          <button class="nav-btn">
-            <a href="#" class="btn">Get Started</a>
-          </button>
         </ul>
       </nav>
     </div>
