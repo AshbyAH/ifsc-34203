@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -34,13 +36,10 @@
           <li class="nav-item"><a class="nav-link" href="#">Popular</a></li>
           <li class="nav-item"><a class="nav-link" href="#">New</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Simulcasts</a></li>
-          <li class="nav-item"><a class="nav-link" id="genre-nav" href="#">Genres</a></li>
           <div class="dropdown">
             <input type="checkbox" id="drop-toggle" class="drop-toggle">
             <li class="nav-item">
-              <label for="drop-toggle" class="genres">
-              <span>Genres</span>
-            </label></li>
+              <label for="drop-toggle" class="genres">Genres</label></li>
             <div class="dropdown-menu">
               <ul class="drop-list">
                 <li class="dropdown-item"><a class="item-link" href="#">Action</a></li>
@@ -54,6 +53,8 @@
               </ul>
             </div>
           </div>
+          <li class="nav-item"><a class="nav-link" id="genre-nav" href="#">Genres</a></li>
+          
           <form action="#" class="search">
             <input type="search" placeholder="Search for anime..." required>
             <button type="submit">
@@ -66,6 +67,25 @@
       </nav>
     </div>
   </header>
+
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <picture>
+          <source class="carousel-img" srcset="assets/img/DrStone-banner-xl.webp" media="(min-width: 1920px)" />
+          <source class="carousel-img" srcset="assets/img/DrStone-banner-l.avif" media="(min-width: 960px)" />
+          <source class="carousel-img" srcset="assets/img/DrStone-banner-m.avif" media="(min-width: 840px)" />
+          <source class="carousel-img" srcset="assets/img/DrStone-banner-s.avif" media="(min-width: 420px)" />
+          <img class="carousel-img" srcset="assets/img/DrStone-banner-xs.avif" alt="" />
+        </picture>
+      </div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+    </div>
+    <button class="cPrev">Prev</button>
+    <button class="cNext">Next</button>
+  </div>
   <main class="container cf">
     <header class="primary">
       <h1>Out with the old...</h1>
