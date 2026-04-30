@@ -286,7 +286,7 @@ input[type="checkbox"] {
 
 /* <------------ Carousel ------------> */
 
-.carousel {
+.carousel body{
   height: 630px;
   width: 420px;
 }
@@ -311,6 +311,7 @@ input[type="checkbox"] {
 .carousel-img {
   max-inline-size: 100%;
   block-size: auto;
+  overflow: hidden;
 }
 
 .nav {
@@ -319,29 +320,29 @@ input[type="checkbox"] {
 }
 
 @media only screen and (min-width: 420px) {
-  .carousel{
+  .carousel body{
     height: 100vh;
     width: 100vw;
   }
 }
 
 @media only screen and (min-width: 840px) {
-  .carousel{
+  .carousel body{
     max-height: 100vh;
-    width: 100vw;
+    width: 99.4vw;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  .carousel{
+  .carousel body{
     height: 100vh;
-    width: 100vw;
+    width: 99.4vw;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .carousel{
+  .carousel body{
     height: 100vh;
-    width: 100vw;
+    width: 99.4vw;
   }
 }
