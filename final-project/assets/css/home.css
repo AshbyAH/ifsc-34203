@@ -23,7 +23,12 @@ body {
 #content {
   min-width: 420px;
   visibility: visible;
-  height: 100%;
+  height: 100vh;
+}
+
+.container-cf {
+  top: 80%;
+  position: relative;
 }
 
 /* <------------ Navbar ------------> */
@@ -360,15 +365,12 @@ img {
 
 /* Responsive Carousel */
 
-@media only screen and (min-width: 840px) {
+@media only screen and (min-width: 421px) {
   .carousel {
     position: relative;
     height: 1260px;
     width: 840px;
-
   }
-
-
 }
 
 @media only screen and (min-width: 960px) {
@@ -376,10 +378,7 @@ img {
     position: relative;
     height: 540px;
     width: 960px;
-
   }
-
-
 }
 
 @media only screen and (min-width: 1350px) {
@@ -387,11 +386,7 @@ img {
     position: relative;
     height: 759px;
     width: 1350px;
-
-    
   }
-
-
 }
 
 @media only screen and (min-width: 1920px) {
@@ -399,19 +394,14 @@ img {
     position: relative;
     height: 1080px;
     width: 1920px;
-
-    
   }
-
-
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2550px) {
   .carousel {
     position: relative;
     height: 1440px;
     width: 2560px;
-
   }
 }
 
@@ -423,3 +413,96 @@ img {
 
   }
 }
+
+/* Continue Slider */
+
+#continue-container {
+  height: 360px;
+  display: grid;
+  place-items: center;
+}
+
+#cont-slider {
+  height: 360px;
+  width: 80vw;
+  max-width: 2500px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#cont-slider .btn {
+  position: absolute;
+  top: 20%;
+  height: 220px;
+  width: 60px;
+  background-image: url("../img/slider-btn-bg.png");
+  opacity: 0.5;
+  position: absolute;
+  cursor: pointer;
+}
+
+#cont-slider .btn:first-of-type {
+  right: 15px;
+}
+
+#cont-slider .btn:last-of-type {
+  transform: rotate(180deg);    /* Rotates the left button 180 degrees so the arrow faces left */
+  left: 45px;
+}
+
+#cont-slider .btn:hover {
+  opacity: 0.95;
+}
+
+#cont-slider #slides {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: all .5s;
+}
+
+#cont-slider #slides .slide {
+  height: 83.3333333%;
+  margin: auto 10px;
+  background-color: #2d2d2d;
+  max-width: 320px;
+}
+
+#cont-slider #slides .slide img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+#cont-slider #slides .slide span {
+  color: var(--hd-txt);
+  font-size: 1.8em;
+}
+
+.slide .slide-body {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.slide .slide-body h6 {
+  font-family: "Nunito Sans", sans-serif;
+  font-style:italic;
+  font-size: 0.7em;
+  color:#BBBBBB;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 1.3em
+}
+
+.slide .slide-body h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.0em;
+  font-weight: 800;
+  overflow-wrap: break-word;
+  color:#EEEEEE;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 1.8em;
+}
+
+/* Responsive Continue Slider */
