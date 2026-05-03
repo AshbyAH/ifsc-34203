@@ -1,0 +1,116 @@
+/* <------------ Carousel ------------> */
+
+.carousel {
+  max-inline-size: 100%;
+  block-size: auto;
+  height: 630px;
+  width: 420px;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.cPrev {
+  top: 50%;
+  left: 60px;
+  z-index: 100;
+  position: absolute;
+}
+
+.cNext {
+  top: 50%;
+  right: 60px;
+  z-index: 100;
+  position: absolute;
+}
+
+.carousel-item {
+  position: absolute;
+  display: none;
+}
+
+.carousel-item.active {
+  display:block;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: unset;
+}
+
+.nav {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.cPrev {
+  top: 50%;
+  left: 60px;
+  z-index: 100;
+}
+
+.nPrev {
+  top: 50%;
+  right: 60px;
+  z-index: 100;
+}
+
+img {
+  display:block;
+  margin:0;
+}
+
+/* Responsive Carousel */
+
+@media only screen and (min-width: 840px) {
+  .carousel {
+    position: relative;
+    height: 1260px;
+    width: 840px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .carousel {
+    position: relative;
+    height: 540px;
+    width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .carousel {
+    position: relative;
+    height: 759px;
+    width: 1350px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .carousel {
+    position: relative;
+    height: 1080px;
+    width: 1920px;
+  }
+}
+
+@media only screen and (min-width: 2550px) {
+  .carousel {
+    position: relative;
+    height: 1440px;
+    width: 2560px;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .carousel {
+    position: relative;
+    height: 2160px;
+    width: 3840px;
+
+  }
+}

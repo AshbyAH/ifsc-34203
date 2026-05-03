@@ -21,7 +21,7 @@ body {
 }
 
 #content {
-  min-width: 420px;
+  min-width: 240px;
   visibility: visible;
   height: 100vh;
 }
@@ -34,6 +34,7 @@ body {
 /* <------------ Navbar ------------> */
 
 .nav {
+  width: 100vw;
   position: sticky;
   top: 0;
   background-color: #1D1D1D;
@@ -42,7 +43,7 @@ body {
 }
 
 .nav-inner {
-  max-width: var(--maxw);
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -300,33 +301,85 @@ input[type="checkbox"] {
 /* <------------ Carousel ------------> */
 
 .carousel {
-  max-inline-size: 100%;
+  /* max-inline-size: 100%;
   block-size: auto;
   height: 630px;
-  width: 420px;
+  width: 420px; */
+  position: relative;
 }
 
 .carousel-inner {
   position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.cPrev,
+.cNext {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
 }
 
 .cPrev {
-  top: 50%;
-  left: 60px;
-  z-index: 100;
-  position: absolute;
+  left: 0;
 }
 
 .cNext {
-  top: 50%;
-  right: 60px;
-  z-index: 100;
-  position: absolute;
+  right: 0;
+}
+
+.cPrev:focus,
+.cPrev:hover,
+.cNext:focus,
+.cNext:hover {
+  opacity: 1;
+}
+
+.cPrev-icon,
+.cNext-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.cPrev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237300FF'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/%3e%3c/svg%3e");
+}
+
+.cNext-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237300FF'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
 }
 
 .carousel-item {
-  position: absolute;
+  position: relative;
   display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .carousel-item.active {
@@ -336,82 +389,38 @@ input[type="checkbox"] {
 .carousel-img {
   width: 100%;
   height: 100%;
-  display: block;
+  vertical-align: middle;
+  /* display: block;
   object-fit: contain;
-  object-position: unset;
+  object-position: unset; */
 }
 
-.nav {
-  max-inline-size: 100%;
-  block-size: auto;
-}
 
-.cPrev {
-  top: 50%;
-  left: 60px;
-  z-index: 100;
-}
-
-.nPrev {
-  top: 50%;
-  right: 60px;
-  z-index: 100;
-}
-
-img {
-  display:block;
-  margin:0;
-}
 
 /* Responsive Carousel */
 
-@media only screen and (min-width: 421px) {
-  .carousel {
-    position: relative;
-    height: 1260px;
-    width: 840px;
-  }
+@media only screen and (min-width: 420px) {
+  
+}
+
+@media only screen and (min-width: 840px) {
+  
 }
 
 @media only screen and (min-width: 960px) {
-  .carousel {
-    position: relative;
-    height: 540px;
-    width: 960px;
-  }
+  
 }
 
 @media only screen and (min-width: 1350px) {
-  .carousel {
-    position: relative;
-    height: 759px;
-    width: 1350px;
-  }
+  
 }
 
 @media only screen and (min-width: 1920px) {
-  .carousel {
-    position: relative;
-    height: 1080px;
-    width: 1920px;
-  }
+  
 }
 
-@media only screen and (min-width: 2550px) {
-  .carousel {
-    position: relative;
-    height: 1440px;
-    width: 2560px;
-  }
-}
-
-@media only screen and (min-width: 3840px) {
-  .carousel {
-    position: relative;
-    height: 2160px;
-    width: 3840px;
-
-  }
+@media only screen and (min-width: 2560px) {
+  
 }
 
 /* Continue Slider */
@@ -427,7 +436,7 @@ img {
   font-size: 1.8em;
   font-weight: 800;
   color:#EEEEEE;
-  margin-top: 60px;
+  margin-top: -10px;
 }
 
 #cont-slider {
@@ -441,7 +450,7 @@ img {
 
 #cont-slider .btn {
   position: absolute;
-  top: 35%;
+  top: 10%;
   height: 220px;
   width: 60px;
   background-image: url("../img/slider-btn-bg.png");
@@ -528,12 +537,18 @@ img {
 
 @media only screen and (max-width: 960px) {
   #cont-slider #slides .slide {
-    width: calc(5% - 20px);
+    width: 5%
   }
 }
 
 @media only screen and (max-width: 840px) {
   #cont-slider #slides .slide {
-    width: calc(7.5% - 20px);
+    width: calc(5.29761905% - 20px);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #cont-slider #slides .slide {
+    width: calc(10% - 20px);
   }
 }
