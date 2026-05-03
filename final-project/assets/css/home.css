@@ -417,13 +417,21 @@ img {
 /* Continue Slider */
 
 #continue-container {
-  height: 360px;
+  height: 420px;
   display: grid;
   place-items: center;
 }
 
+.category-hd {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.8em;
+  font-weight: 800;
+  color:#EEEEEE;
+  margin-top: 60px;
+}
+
 #cont-slider {
-  height: 360px;
+  height: 420px;
   width: 80vw;
   max-width: 2500px;
   position: relative;
@@ -433,7 +441,7 @@ img {
 
 #cont-slider .btn {
   position: absolute;
-  top: 20%;
+  top: 35%;
   height: 220px;
   width: 60px;
   background-image: url("../img/slider-btn-bg.png");
@@ -443,12 +451,12 @@ img {
 }
 
 #cont-slider .btn:first-of-type {
-  right: 15px;
+  right: 5px;
 }
 
 #cont-slider .btn:last-of-type {
   transform: rotate(180deg);    /* Rotates the left button 180 degrees so the arrow faces left */
-  left: 45px;
+  left: 35px;
 }
 
 #cont-slider .btn:hover {
@@ -465,7 +473,6 @@ img {
 #cont-slider #slides .slide {
   height: 83.3333333%;
   margin: auto 10px;
-  background-color: #2d2d2d;
   max-width: 320px;
 }
 
@@ -506,3 +513,27 @@ img {
 }
 
 /* Responsive Continue Slider */
+
+@media only screen and (min-width: 1350px) {
+  #cont-slider #slides .slide {
+    width: calc(2.5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  #cont-slider #slides .slide {
+    width: calc(3.3333333% - 20px);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #cont-slider #slides .slide {
+    width: calc(5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  #cont-slider #slides .slide {
+    width: calc(7.5% - 20px);
+  }
+}
