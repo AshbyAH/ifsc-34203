@@ -425,7 +425,7 @@ input[type="checkbox"] {
 
 /* Continue Slider */
 
-#continue-container {
+.continue-container {
   height: 420px;
   display: grid;
   place-items: center;
@@ -459,6 +459,10 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+#cont-slider .btn .inactive {
+  opacity: 1;
+}
+
 #cont-slider .btn:first-of-type {
   right: 5px;
 }
@@ -472,25 +476,26 @@ input[type="checkbox"] {
   opacity: 0.95;
 }
 
-#cont-slider #slides {
+#cont-slider #slider {
   display: flex;
   width: 1000%;
   height: 100%;
   transition: all .5s;
 }
 
-#cont-slider #slides .slide {
+#cont-slider #slider .slide {
   height: 83.3333333%;
   margin: auto 10px;
   max-width: 320px;
 }
 
-#cont-slider #slides .slide img {
+#cont-slider #slider .slide img {
   max-inline-size: 100%;
   block-size: auto;
+  cursor: pointer;
 }
 
-#cont-slider #slides .slide span {
+#cont-slider #slider .slide span {
   color: var(--hd-txt);
   font-size: 1.8em;
 }
@@ -523,32 +528,40 @@ input[type="checkbox"] {
 
 /* Responsive Continue Slider */
 
-@media only screen and (min-width: 1350px) {
-  #cont-slider #slides .slide {
+@media only screen and (min-width: 2176px) {
+  #cont-slider #slider .slide {
+    width: calc(1.6666% - 20px);
+  }
+}
+
+@media only screen and (max-width: 2176px) {
+  #cont-slider #slider .slide {
+    width: calc(2% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1750px) {
+  #cont-slider #slider .slide {
     width: calc(2.5% - 20px);
   }
 }
 
-@media only screen and (max-width: 1350px) {
-  #cont-slider #slides .slide {
+@media only screen and (max-width: 1324px) {
+  #cont-slider #slider .slide {
     width: calc(3.3333333% - 20px);
   }
 }
 
-@media only screen and (max-width: 960px) {
-  #cont-slider #slides .slide {
-    width: 5%
+@media only screen and (max-width: 900px) {
+  #cont-slider #slider .slide {
+    width: calc(5% - 20px);
   }
 }
 
-@media only screen and (max-width: 840px) {
-  #cont-slider #slides .slide {
-    width: calc(5.29761905% - 20px);
-  }
-}
+
 
 @media only screen and (max-width: 420px) {
-  #cont-slider #slides .slide {
+  #cont-slider #slider .slide {
     width: calc(10% - 20px);
   }
 }
