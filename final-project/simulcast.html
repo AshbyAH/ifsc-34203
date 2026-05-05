@@ -71,10 +71,15 @@
 
     <div class="simulcasts">
       <div class="grid-header">
-        <h2 class="page-title">Simulcast Season</h2>
+        <ul class="season-list">
+          <button class="season-btn spring-26 active" onclick="expand('spring-26')" id="">Spring 2026</button>
+          <button class="season-btn winter-26" onclick="expand('winter-26')" id="">Winter 2026</button>
+          <button class="season-btn fall-25" onclick="expand('fall-25')" id="">Fall 2025</button>
+          <button class="season-btn summer-25" onclick="expand('summer-25')" id="">Summer 2025</button>
+        </ul>
       </div>
-      <h4 class="season">Spring 2026</h4>
-      <div class="flex-grid" id="spring-26">
+      <h4 class="season spring-26 active" id="">Spring 2026</h4>
+      <div class="flex-grid active" id="spring-26">
         <div class="anime-card">
           <a tabindex="-1" href="#" class="card-link">
             <div class="image-container">
@@ -221,7 +226,7 @@
         </div>
       </div>
 
-      <h4 class="season">Winter 2026</h4>
+      <h4 class="season winter-26" id="">Winter 2026</h4>
       <div class="flex-grid" id="winter-26">
         <div class="anime-card">
           <a tabindex="-1" href="#" class="card-link">
@@ -297,7 +302,7 @@
         </div>
       </div>
 
-      <h4 class="season">Fall 2025</h4>
+      <h4 class="season fall-25">Fall 2025</h4>
       <div class="flex-grid" id="fall-25">
         <div class="anime-card">
           <a tabindex="-1" href="#" class="card-link">
@@ -397,7 +402,7 @@
         </div>
       </div>
 
-      <h4 class="season">Summer 2025</h4>
+      <h4 class="season summer-25">Summer 2025</h4>
       <div class="flex-grid" id="summer-25">
         <div class="anime-card">
           <a tabindex="-1" href="#" class="card-link">
@@ -521,5 +526,7 @@
         </div>
       </div>
     </div>
+
+    <script src="assets/js/showgrid.js"></script>
   </div>
 </body>
