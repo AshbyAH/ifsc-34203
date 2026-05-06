@@ -66,9 +66,10 @@ function setParams(w) {
 }
 
 checkWidth();
+var currPos = slidesPerPg;
 
 function slideRight() {
-    if (currPos != 0) {
+    if (currPos != slidesPerPg) {
         slider.style.marginLeft = currMargin + (100) + '%';
         currMargin += (100);
         currPos -= slidesPerPg;
@@ -81,11 +82,13 @@ function slideRight() {
     if (currPos < slides) {
         btns[1].classList.remove('inactive');
     }
+    console.log(currPos)
 };
 
 function slideLeft() {
+    console.log(slides)
     console.log(currPos)
-    if ((currPos < slides)) {
+    if (currPos < slides) {
         slider.style.marginLeft = currMargin - (100) + '%';
         currMargin -= (100);
         currPos += slidesPerPg;
@@ -98,4 +101,5 @@ function slideLeft() {
         btns[0].classList.remove('inactive');
     }
     console.log(currPos)
+    
 };

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Out with the old...</title>
+  <link rel="stylesheet" href="assets/css/catalog.css">
+  <meta name="description" content="We are going to refine this document down to a good starting point for all html5 projects moving forward." />
+  <meta name="author" content="Ashby Harmon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
+  
+</head>
+
+<body>
+  <div id="content" class="root-layout">
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="assets/img/flex-roll.png" alt="logo" class="logo-img">
+          <span></span>
+        </a>
+
+        <input type="checkbox" id="toggle-menu" class="toggle-menu">
+        <label for="toggle-menu" class="hamburger">
+          <span></span>
+        </label>
+
+
+        <nav class="nav-menu">
+          <ul class="menu">
+            <li class="nav-item"><a class="nav-link" href="#">Catalog</a></li>
+            <li class="nav-item"><a class="nav-link" href="popular.html">Popular</a></li>
+            <li class="nav-item"><a class="nav-link" href="simulcast.html">Simulcasts</a></li>
+            <div class="dropdown">
+              <input type="checkbox" id="drop-toggle" class="drop-toggle">
+              <li class="nav-item">
+                <label for="drop-toggle" class="genres">Genres</label></li>
+              <div class="dropdown-menu">
+                <ul class="drop-list">
+                  <li class="dropdown-item"><a class="item-link" href="#">Action</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Adventure</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Comedy</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Drama</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Fantasy</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Romance</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Sci-Fi</a></li>
+                  <li class="dropdown-item"><a class="item-link" href="#">Slice of Life</a></li>
+                </ul>
+              </div>
+            </div>
+            <li class="nav-item"><a class="nav-link" id="genre-nav" href="#">Genres</a></li>
+            
+            <form action="#" class="search">
+              <input type="search" placeholder="Search for anime..." required>
+              <button type="submit">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <picture>
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-xl.webp" media="(min-width: 2560px)" /> 
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-2k.webp" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-l.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-mm.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-m.avif" media="(min-width: 840px)" />
+            <source class="carousel-img" srcset="assets/img/DrStone-banner-s.avif" media="(min-width: 420px)" />
+            <img class="carousel-img" srcset="assets/img/DrStone-banner-xs.avif" alt="" />
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-xl.webp" media="(min-width: 3840px)" /> 
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-2k.webp" media="(min-width: 2550px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-l.avif" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-mm.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-m.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-s.avif" media="(min-width: 420px)" />
+            <img class="carousel-img" srcset="assets/img/ChainsawMan-banner-xs.avif" alt="" />
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source class="carousel-img" srcset="assets/img/Slime-banner-xl.webp" media="(min-width: 2560px)" /> 
+            <source class="carousel-img" srcset="assets/img/Slime-banner-2k.webp" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/Slime-banner-l.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/Slime-banner-mm.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/Slime-banner-m.avif" media="(min-width: 840px)" />
+            <source class="carousel-img" srcset="assets/img/Slime-banner-s.avif" media="(min-width: 420px)" />
+            <img class="carousel-img" srcset="assets/img/Slime-banner-xs.avif" alt="" />
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-xl.webp" media="(min-width: 3840px)" /> 
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-2k.webp" media="(min-width: 2550px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-l.avif" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-mm.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-m.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-s.avif" media="(min-width: 420px)" />
+            <img class="carousel-img" srcset="assets/img/SoloLeveling-banner-xs.avif" alt="" />
+          </picture>
+        </div>
+      </div>
+      <button class="cPrev" id="cPrev">
+        <span class="cPrev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Prev</span>
+      </button>
+      <button class="cNext" id="cNext">
+        <span class="cNext-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <script src="assets/js/carousel.js"></script>
+    
+    <div class="slide-container" id="slide-container">
+      <div id="anime-slider">
+        <h2 class="category-hd">Recommended for You</h2>
+        <span onclick="slideLeft()" class="btn" id="btn-r"></span>
+        <div id="slider">
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/thestrongest-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Am I Actually the Strongest?</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/aot-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Attack on Titan</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/draja-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Dragon Raja</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/tbhx-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">TO BE HERO X</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/grancrest-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Record of Grancrest War</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/dball-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Dragon Ball</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/dballz-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Dragon Ball Z</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/dballzr-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Dragon Ball Z: Resurrection 'F'</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/spyx-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">SPY x FAMILY</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/butler-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Black Butler</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="cover" src="assets/img/covers/mob-cover.avif" />
+            <div class="slide-body">
+              <h4 class="episode">Mob Psycho 100</h4>
+            </div>
+          </div>
+        </div>
+        <span onclick="slideRight()" class="btn" id="btn-l"></span>
+      </div>
+    </div>
+
+    <script src="assets/js/slidelist.js"></script>
+    
