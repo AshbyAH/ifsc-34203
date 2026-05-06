@@ -556,46 +556,8 @@ input[type="checkbox"] {
   }
 }
 
-@media only screen and (max-width: 750px) {
-  .slide-container {
-    height: 540px;
-  }
-
-  #anime-slider {
-    height: 540px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .slide-container {
-    height: 500px;
-  }
-
-  #anime-slider {
-    height: 500px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .slide-container {
-      height: 450px;
-  }
-
-  #anime-slider {
-      height: 450px;
-  }
-}
-
 @media only screen and (max-width: 420px) {
   #anime-slider #slider .slide {
     width: calc(10% - 20px);
   }
-  .slide-container {
-    height: 610px;
-  }
-
-  #anime-slider {
-    height: 610px;
-  }
-  
 }
