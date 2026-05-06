@@ -84,11 +84,11 @@
         </div>
         <div class="carousel-item">
           <picture>
-            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-xl.webp" media="(min-width: 3840px)" /> 
-            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-2k.webp" media="(min-width: 2550px)" />
-            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-l.avif" media="(min-width: 1920px)" />
-            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-mm.avif" media="(min-width: 1350px)" />
-            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-m.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-xl.webp" media="(min-width: 2560px)" /> 
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-2k.webp" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-l.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-mm.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-m.avif" media="(min-width: 840px)" />
             <source class="carousel-img" srcset="assets/img/ChainsawMan-banner-s.avif" media="(min-width: 420px)" />
             <img class="carousel-img" srcset="assets/img/ChainsawMan-banner-xs.avif" alt="" />
           </picture>
@@ -106,11 +106,11 @@
         </div>
         <div class="carousel-item">
           <picture>
-            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-xl.webp" media="(min-width: 3840px)" /> 
-            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-2k.webp" media="(min-width: 2550px)" />
-            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-l.avif" media="(min-width: 1920px)" />
-            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-mm.avif" media="(min-width: 1350px)" />
-            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-m.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-xl.webp" media="(min-width: 2560px)" /> 
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-2k.webp" media="(min-width: 1920px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-l.avif" media="(min-width: 1350px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-mm.avif" media="(min-width: 960px)" />
+            <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-m.avif" media="(min-width: 840px)" />
             <source class="carousel-img" srcset="assets/img/SoloLeveling-banner-s.avif" media="(min-width: 420px)" />
             <img class="carousel-img" srcset="assets/img/SoloLeveling-banner-xs.avif" alt="" />
           </picture>
@@ -129,85 +129,203 @@
     <script src="assets/js/carousel.js"></script>
     
     <div class="slide-container" id="slide-container">
-      <div id="anime-slider">
-        <h2 class="category-hd">Recommended for You</h2>
-        <span onclick="slideLeft()" class="btn" id="btn-r"></span>
-        <div id="slider">
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/thestrongest-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Am I Actually the Strongest?</h4>
+      <ul class="slider-list">
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Recommended for You</h2>
+          <span onclick="slideLeft(0)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/thestrongest-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Am I Actually the Strongest?</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/draja-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Raja</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tbhx-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">TO BE HERO X</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/grancrest-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Record of Grancrest War</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dball-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballz-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Z</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballzr-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Z: Resurrection 'F'</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/spyx-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">SPY x FAMILY</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/butler-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Butler</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mob-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Mob Psycho 100</h4>
+              </div>
             </div>
           </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/aot-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Attack on Titan</h4>
+          <span onclick="slideRight(0)" class="btn-l" id="btn-l"></span>
+        </div></li>
+        
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Trending Now</h2>
+          <span onclick="slideLeft(1)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/jujutsu-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">JUJUTSU KAISEN</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/slime-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">That Time I Got Reincarnated as a Slime</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/cote-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Classroom of the Elite</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/drstone-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dr. Stone</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/frieren-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Frieren: Beyond Journey's End</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gachi-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gachiakuta</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/spyx-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">SPY x FAMILY</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/chainsaw-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Chainsaw Man</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fireforce-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fire Force</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/hparadise-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Hell's Paradise</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/daemons-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Daemons of the Shadow Realm</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/rezero-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Re:ZERO -Starting Life in Another World-</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/shield-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Rising of the Shield Hero</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tbate-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Beginning After the End</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/wistoria-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Wistoria: Wand and Sword</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/darling-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Dress-Up Darling</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/atelier-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Witch Hat Atelier</h4>
+              </div>
             </div>
           </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/draja-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Dragon Raja</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/tbhx-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">TO BE HERO X</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/grancrest-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Record of Grancrest War</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/dball-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Dragon Ball</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/dballz-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Dragon Ball Z</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/dballzr-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Dragon Ball Z: Resurrection 'F'</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/spyx-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">SPY x FAMILY</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/butler-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Black Butler</h4>
-            </div>
-          </div>
-          <div class="slide">
-            <img class="cover" src="assets/img/covers/mob-cover.avif" />
-            <div class="slide-body">
-              <h4 class="episode">Mob Psycho 100</h4>
-            </div>
-          </div>
-        </div>
-        <span onclick="slideRight()" class="btn" id="btn-l"></span>
-      </div>
+          <span onclick="slideRight(1)" class="btn-l" id="btn-l"></span>
+        </div></li>
+      </ul>
     </div>
 
     <script src="assets/js/tall-slidelist.js"></script>

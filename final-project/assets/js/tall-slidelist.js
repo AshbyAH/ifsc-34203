@@ -1,15 +1,24 @@
 var container = document.getElementById("slide-container");
-var slider = document.getElementById("slider");
-var slides = document.getElementsByClassName("slide").length;
-var btns = document.getElementsByClassName("btn");
+var sliders = document.getElementsByClassName("slider");
+const slides = [];
+const rightBtns = document.getElementsByClassName("btn-r");
+const leftBtns = document.getElementsByClassName("btn-l");
 
-var currPos = 0;
-var currMargin = 0;
+const currPositions = [];
+const currMargins = [];
 var slidesPerPg = 0;
-var slidesCnt = slides - slidesPerPg;
 var containerWidth = container.offsetWidth;
 var prevKeyActive = false;
 var nextKeyActive = true;
+
+var i;
+
+for (i=0; i < sliders.length; i++) {
+    currPositions.push(0);
+    currMargins.push(0);
+
+    slides[i] = sliders[i].getElementsByClassName("slide").length; // Adds the individual lengths of each slider to the slides array
+}
 
 window.addEventListener("resize", checkWidth);
 
@@ -44,74 +53,77 @@ function setParams(w) {
         }
     }
 
-    slidesCnt = slides - slidesPerPg;
-    if (currPos > slides) {
-        currPos -= slidesPerPg;
-    };
+    for (i=0; i < sliders.length; i++) {
+        if (currPositions[i] > slides[i]) {
+        currPositions[i] -= slidesPerPg;
+        };
 
-    currMargin = - currPos * (100);
-    slider.style.marginLeft = currMargin + '%';
+        currMargins[i] = - currPositions[i] * (100);
+        sliders[i].style.marginLeft = currMargins[i] + '%';
 
-    if (currPos > 0) {
-        btns[0].classList.remove('inactive');
-    }
+        if (currPositions[i] > slidesPerPg) {
+            leftBtns[i].classList.remove('inactive');
+        }
 
-    if (currPos < slides) {
-        btns[1].classList.remove('inactive');
-    }
+        if (currPositions[i] < slides[i]) {
+            rightBtns[i].classList.remove('inactive');
+        }
 
-    if (currPos >= slides) {
-        btns[1].classList.add('inactive');
+        if (currPositions[i] >= slides[i]) {
+            rightBtns[i].classList.add('inactive');
+        }
     }
 }
 
 checkWidth();
-var currPos = slidesPerPg;
+for (i=0; i < sliders.length; i++) {
+    currPositions[i] = slidesPerPg;
+}
 
-function slideRight() {
-    if (currPos != slidesPerPg) {
+function slideRight(sid) {
+    if (currPositions[sid] != slidesPerPg) {
         if (slidesPerPg === 1) {
-            slider.style.marginLeft = currMargin + (83.333333) + '%';
-            currMargin += (83.333333);
-            currPos -= slidesPerPg;
+            sliders[sid].style.marginLeft = currMargins[sid] + (83.333333) + '%';
+            currMargins[sid] += (83.333333);
+            currPositions[sid] -= slidesPerPg;
         } else {
-            slider.style.marginLeft = currMargin + (100) + '%';
-            currMargin += (100);
-            currPos -= slidesPerPg;
+            sliders[sid].style.marginLeft = currMargins[sid] + (100) + '%';
+            currMargins[sid] += (100);
+            currPositions[sid] -= slidesPerPg;
         }
     };
 
-    if (currPos === 0) {
-        btns[0].classList.add('inactive');
+    if (currPositions[sid] === slidesPerPg) {
+        leftBtns[sid].classList.add('inactive');
     }
 
-    if (currPos < slides) {
-        btns[1].classList.remove('inactive');
+    if (currPositions[sid] < slides[sid]) {
+        rightBtns[sid].classList.remove('inactive');
     }
-    console.log(currPos)
+    console.log(currPositions[sid])
 };
 
-function slideLeft() {
-    console.log(slides)
-    console.log(currPos)
-    if (currPos < slides) {
+function slideLeft(sid) {
+    console.log(slides[sid])
+    console.log(currPositions[sid])
+    if (currPositions[sid] < slides[sid]) {
         if (slidesPerPg === 1) {
-            slider.style.marginLeft = currMargin - (83.333333) + '%';
-            currMargin -= (83.333333);
-            currPos += slidesPerPg;
+            sliders[sid].style.marginLeft = currMargins[sid] - (83.333333) + '%';
+            currMargins[sid] -= (83.333333);
+            currPositions[sid] += slidesPerPg;
         } else {
-            slider.style.marginLeft = currMargin - (100) + '%';
-            currMargin -= (100);
-            currPos += slidesPerPg;
+            sliders[sid].style.marginLeft = currMargins[sid] - (100) + '%';
+            currMargins[sid] -= (100);
+            currPositions[sid] += slidesPerPg;
         }
     }
-    if (currPos >= slides) {
-        btns[1].classList.add('inactive');
+    if (currPositions[sid] >= slides[sid]) {
+        rightBtns[sid].classList.add('inactive');
     }
 
-    if (currPos > 0) {
-        btns[0].classList.remove('inactive');
+    if (currPositions[sid] > 0) {
+        leftBtns[sid].classList.remove('inactive');
     }
-    console.log(currPos)
+    console.log(currPositions[sid])
     
 };

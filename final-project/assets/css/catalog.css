@@ -305,7 +305,7 @@ input[type="checkbox"] {
   block-size: auto;
   height: 630px;
   width: 420px; */
-  position: relative;
+  position: absolute;
 }
 
 .carousel-inner {
@@ -429,6 +429,13 @@ input[type="checkbox"] {
   height: 640px;
   display: grid;
   place-items: center;
+  position: relative;
+  width: 100vw;
+  margin-top: 47%;
+}
+
+.slider-list {
+  list-style: none;
 }
 
 .category-hd {
@@ -436,7 +443,7 @@ input[type="checkbox"] {
   font-size: 1.8em;
   font-weight: 800;
   color:#EEEEEE;
-  margin-top: -10px;
+  margin-left: 7px;
 }
 
 #anime-slider {
@@ -448,7 +455,7 @@ input[type="checkbox"] {
   padding: 20px;
 }
 
-#anime-slider .btn {
+#anime-slider .btn-r {
   position: absolute;
   top: 27%;
   height: 220px;
@@ -457,22 +464,44 @@ input[type="checkbox"] {
   opacity: 0.5;
   position: absolute;
   cursor: pointer;
-}
-
-#anime-slider .btn .inactive {
-  opacity: 1;
-}
-
-#anime-slider .btn:first-of-type {
   right: 5px;
 }
 
-#anime-slider .btn:last-of-type {
-  transform: rotate(180deg);    /* Rotates the left button 180 degrees so the arrow faces left */
-  left: 35px;
+#anime-slider .btn-l {
+  position: absolute;
+  top: 27%;
+  height: 220px;
+  width: 60px;
+  background-image: url("../img/slider-btn-bg.png");
+  opacity: 0.5;
+  position: absolute;
+  cursor: pointer;
+  left: 10px;
+  transform: rotate(180deg);
 }
 
-#anime-slider .btn:hover {
+#anime-slider .btn-r .inactive {
+  opacity: 1;
+}
+
+#anime-slider .btn-l .inactive {
+  opacity: 1;
+}
+
+/* #anime-slider .btn:first-of-type {
+  right: 5px;
+} */
+
+/* #anime-slider .btn:last-of-type {
+  transform: rotate(180deg);     Rotates the left button 180 degrees so the arrow faces left 
+  left: 35px;
+} */
+
+#anime-slider .btn-r:hover {
+  opacity: 0.95;
+}
+
+#anime-slider .btn-l:hover {
   opacity: 0.95;
 }
 
