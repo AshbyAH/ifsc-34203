@@ -480,12 +480,12 @@ input[type="checkbox"] {
   transform: rotate(180deg);
 }
 
-#anime-slider .btn-r .inactive {
-  opacity: 1;
+#anime-slider .btn-r.inactive {
+  opacity: 0;
 }
 
-#anime-slider .btn-l .inactive {
-  opacity: 1;
+#anime-slider .btn-l.inactive {
+  opacity: 0;
 }
 
 /* #anime-slider .btn:first-of-type {
@@ -507,7 +507,7 @@ input[type="checkbox"] {
 
 #anime-slider #slider {
   display: flex;
-  width: 1000%;
+  width: 1500%;
   height: 100%;
   transition: all .5s;
 }
@@ -557,36 +557,58 @@ input[type="checkbox"] {
 
 @media only screen and (min-width: 2176px) {
   #anime-slider #slider .slide {
-    width: calc(1.6666% - 20px);
+    width: calc(1.11% - 20px);
   }
 }
 
 @media only screen and (max-width: 2176px) {
   #anime-slider #slider .slide {
-    width: calc(2% - 20px);
+    width: calc(1.3333333% - 20px);
   }
 }
 
 @media only screen and (max-width: 1750px) {
   #anime-slider #slider .slide {
-    width: calc(2.5% - 20px);
+    width: calc(1.666666% - 20px);
   }
 }
 
 @media only screen and (max-width: 1324px) {
   #anime-slider #slider .slide {
-    width: calc(3.3333333% - 20px);
+    width: calc(2.22% - 20px);
   }
 }
 
 @media only screen and (max-width: 900px) {
   #anime-slider #slider .slide {
-    width: calc(5% - 20px);
+    width: calc(3.32% - 20px);
+  }
+
+  .category-hd {
+    font-size: 1.4em;
+  }
+}
+
+
+
+@media only screen and (max-width: 839px) {
+  .slide-container {
+    margin-top: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #anime-slider {
+    height: 520px;
   }
 }
 
 @media only screen and (max-width: 420px) {
   #anime-slider #slider .slide {
-    width: calc(10% - 20px);
+    width: calc(6.66% - 20px);
+  }
+
+  #anime-slider {
+    height: 640px;
   }
 }
