@@ -82,9 +82,9 @@ for (i=0; i < sliders.length; i++) {
 
 function slideRight(sid) {
     if (currPositions[sid] != slidesPerPg) {
-        if (slidesPerPg === 1) {
-            sliders[sid].style.marginLeft = currMargins[sid] + (100) + '%';
-            currMargins[sid] += (100);
+        if (slidesPerPg === 1 && slides[sid] > 15) {
+            sliders[sid].style.marginLeft = currMargins[sid] + (83.3333) + '%';
+            currMargins[sid] += (83.3333);
             currPositions[sid] -= slidesPerPg;
         } else {
             sliders[sid].style.marginLeft = currMargins[sid] + (100) + '%';
@@ -107,9 +107,9 @@ function slideLeft(sid) {
     console.log(slides[sid])
     console.log(currPositions[sid])
     if (currPositions[sid] < slides[sid]) {
-        if (slidesPerPg === 1) {
-            sliders[sid].style.marginLeft = currMargins[sid] - (100) + '%';
-            currMargins[sid] -= (100);
+        if (slidesPerPg === 1 && slides[sid] > 15) {
+            sliders[sid].style.marginLeft = currMargins[sid] - (83.3333) + '%';
+            currMargins[sid] -= (83.3333);
             currPositions[sid] += slidesPerPg;
         } else {
             sliders[sid].style.marginLeft = currMargins[sid] - (100) + '%';

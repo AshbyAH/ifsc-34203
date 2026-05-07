@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Out with the old...</title>
+  <link rel="stylesheet" href="assets/css/genres.css">
+  <meta name="description" content="We are going to refine this document down to a good starting point for all html5 projects moving forward." />
+  <meta name="author" content="Ashby Harmon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
+  
+</head>
+
+<body>
+  <div id="content" class="root-layout">
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="brand">
+          <img src="assets/img/flex-roll.png" alt="logo" class="logo-img">
+          <span></span>
+        </a>
+        <input type="checkbox" id="toggle-menu" class="toggle-menu">
+        <label for="toggle-menu" class="hamburger">
+          <span></span>
+        </label>
+        <nav class="nav-menu">
+          <ul class="menu">
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+            <li class="nav-item"><a class="nav-link" href="popular.html">Popular</a></li>
+            <li class="nav-item"><a class="nav-link" href="simulcast.html">Simulcasts</a></li>
+            <li class="nav-item"><a class="nav-link" href="genres.html">Genres</a></li>
+            <form action="#" class="search">
+              <input type="search" placeholder="Search for anime..." required>
+              <button type="submit">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </form>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="slide-container" id="slide-container">
+      <ul class="slider-list">
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Action</h2>
+          <span onclick="slideLeft(0)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gachi-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gachiakuta</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mob-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Mob Psycho 100</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fireforce-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fire Force</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/hparadise-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Hell's Paradise</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dball-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballz-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Z</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballzr-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Z: Resurrection 'F'</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballsup-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Super</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tsukumichi-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">TSUKUMICHI -Moonlit Fantasy-</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sentenced-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sentenced to Be a Hero</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/kamuy-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Golden Kamuy</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/solo-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Solo Leveling</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/berserk-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Berserk</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/chainsaw-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Chainsaw Man</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(0)" class="btn-l" id="btn-l"></span>
+        </div></li>
+        
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Adventure</h2>
+          <span onclick="slideLeft(1)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/frieren-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Frieren: Beyond Journey's End</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gatherer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">A Gatherer's Adventure in Isekai</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/drstone-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dr. Stone</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dball-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballz-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Z</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/campfire-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Campfire Cooking in Another World with My Absurd Skill</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/conan-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Detective Conan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/overlord-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Overlord</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/digimon-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Digimon Beatbreak</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tsukumichi-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">TSUKUMICHI -Moonlit Fantasy-</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/eternity-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">To Your Eternity</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/soa-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sword Art Online</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/vacation-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">A Gentle Noble's Vacation Recommendation</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/rhapsody-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Death March to the Parallel World Rhapsody</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/konosuba-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">KONOSUBA -God's Blessing on this wonderful world!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/smartphone-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">In Another World With My Smartphone</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(1)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Fantastical Worlds - Fantasy</h2>
+          <span onclick="slideLeft(2)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/arifureta-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Arifureta: From Commonplace to World's Strongest</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/atelier-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Witch Hat Atelier</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/berserk-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Berserk</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/campfire-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Campfire Cooking in Another World with My Absurd Skill</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/clover-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Clover</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/frieren-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Frieren: Beyond Journey's End</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/geass-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Code Geass</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/grancrest-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Record of Grancrest War</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/konosuba-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">KONOSUBA -God's Blessing on this wonderful world!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/pharmacy-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Parallel World Pharmacy</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/restaurant-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Restaurant to Another World</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sentenced-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sentenced to be A Hero</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/skeleton-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Skeleton Knight in Another World</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/shield-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Rising of The Shield Hero</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/slime-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">That Time I Got Reincarnated as a Slime</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tbate-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Beginning After The End</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/thestrongest-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Am I Actually the Strongest?</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(2)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Love in the Air - Romance</h2>
+          <span onclick="slideLeft(4)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/darling-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Dress-Up Darling</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/hori-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Horimiya</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/cuckoos-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">A Couple of Cuckoos</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/yourlie.jpe" />
+              <div class="slide-body">
+                <h4 class="episode">Your Lie in April</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mcouple-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">More Than a Married Couple, but Not Lovers.</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/affection-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">A Sign of Affection</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/masamune-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Masamune-kun's Revenge</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/catch-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Always a Catch!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/nakamura-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Go For It, Nakamura-kun</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/opposites-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">You and I Are Polar Opposites</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/falling-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Anyway, I'm Falling in Love with You.</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/lovegame-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">I Want to End this Love Game</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/replica-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Even a Replica Can Fall in Love</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tomochan-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Tomo-chan Is a Girl!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/tonikawa-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">TONIKAWA: Over The Moon For You</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/rascal-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Rascal Does Not Dream Series</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/lvl999-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Love Story with Yamada-kun at Lv999</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(4)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+                <li><div id="anime-slider">
+          <h2 class="category-hd">Into the Future - Sci-Fi</h2>
+          <span onclick="slideLeft(4)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/slime-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">That Time I Got Reincarnated as a Slime</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/shield-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Rising of the Shield Hero</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/arifureta-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Arifureta: From Commonplace to World's Strongest</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mushoku-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Mushoku Tensei: Jobless Reincarnation</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/rezero-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Re:ZERO -Starting Life in Another World-</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/restaurant-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Restaurant to Another World</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/wiseman-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Wise Man's Grandchild</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/skeleton-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Skeleton Knight in Another World</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/faraway-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">The Faraway Paladin</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/pharmacy-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Parallel World Pharmacy</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(4)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Seinen</h2>
+          <span onclick="slideLeft(3)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fullmetal-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fullmetal Alchemist: Brotherhood</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballsup-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Super</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/jojo-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">JoJo's Bizarre Adventure</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/clover-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Clover</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gintama-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gintama</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sao-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sword Art Online</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/yugioh-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Yu-Gi-Oh</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sympho-cover.jpe" />
+              <div class="slide-body">
+                <h4 class="episode">Symphogear</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/reborn-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">REBORN!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(3)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Shojo</h2>
+          <span onclick="slideLeft(3)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fullmetal-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fullmetal Alchemist: Brotherhood</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballsup-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Super</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/jojo-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">JoJo's Bizarre Adventure</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/clover-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Clover</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gintama-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gintama</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sao-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sword Art Online</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/yugioh-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Yu-Gi-Oh</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sympho-cover.jpe" />
+              <div class="slide-body">
+                <h4 class="episode">Symphogear</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/reborn-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">REBORN!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(3)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Shonen</h2>
+          <span onclick="slideLeft(3)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fullmetal-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fullmetal Alchemist: Brotherhood</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballsup-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Super</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/jojo-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">JoJo's Bizarre Adventure</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/clover-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Clover</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gintama-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gintama</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sao-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sword Art Online</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/yugioh-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Yu-Gi-Oh</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sympho-cover.jpe" />
+              <div class="slide-body">
+                <h4 class="episode">Symphogear</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/reborn-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">REBORN!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(3)" class="btn-l" id="btn-l"></span>
+        </div></li>
+
+        <li><div id="anime-slider">
+          <h2 class="category-hd">Slice of Life</h2>
+          <span onclick="slideLeft(3)" class="btn-r" id="btn-r"></span>
+          <div id="slider" class="slider">
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/mha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">My Hero Academia</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/aot-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Attack on Titan</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/onepiece-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">One Piece</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/fullmetal-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fullmetal Alchemist: Brotherhood</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dslayer-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Demon Slayer: Kimetsu no Yaiba</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/ftale-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Fairy Tail</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/dballsup-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Dragon Ball Super</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/jojo-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">JoJo's Bizarre Adventure</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/clover-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Black Clover</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/gintama-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Gintama</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sao-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Sword Art Online</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/yugioh-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Yu-Gi-Oh</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/sympho-cover.jpe" />
+              <div class="slide-body">
+                <h4 class="episode">Symphogear</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/reborn-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">REBORN!</h4>
+              </div>
+            </div>
+            <div class="slide">
+              <img class="cover" src="assets/img/covers/inuyasha-cover.avif" />
+              <div class="slide-body">
+                <h4 class="episode">Inuyasha</h4>
+              </div>
+            </div>
+          </div>
+          <span onclick="slideRight(3)" class="btn-l" id="btn-l"></span>
+        </div></li>
+      </ul>
+    </div>
+
+    <script src="assets/js/tall-slidelist.js"></script>
+    
