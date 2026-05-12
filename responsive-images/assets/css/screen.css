@@ -1,0 +1,29 @@
+section {
+  width: 420px;
+  height: 630px;
+  position: absolute;
+}
+
+@media only screen and (min-width: 420px) {
+  section {
+    width: 840px;
+    height: 1260px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  section {
+    width: 960px;
+    height: 540px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  section {
+    width: 2560px;
+    height: 1440px;
+    padding: 10px;
+  }
+}
